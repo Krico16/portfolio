@@ -17,7 +17,7 @@ COPY . .
 RUN bun run build
 
 # Exponer puerto
-EXPOSE 4321
+EXPOSE 8000
 
 # Servir la aplicación con Bun
-CMD ["bun", "run", "preview", "--host", "0.0.0.0", "--port", "4321"]
+CMD ["bun", "run", "preview", "--host", "0.0.0.0", "--port", "8000"]
