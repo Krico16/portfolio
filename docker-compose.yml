@@ -1,13 +1,15 @@
 # docker-compose.yml
-version: '3.8'
+version: "3.8"
 
 services:
   portfolio:
     build: .
-    ports:
-      - "4444:4444"
     environment:
       - NODE_ENV=production
+      - PORT=4321
+    ports:
+      - "4321:4321"
+
     restart: unless-stopped
 
   # Servicio de desarrollo
@@ -22,5 +24,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - PORT=4321
+
     profiles:
       - dev
