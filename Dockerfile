@@ -16,11 +16,6 @@ COPY . .
 # Construir la aplicación
 RUN bun run build
 
-# Instalar servidor estático
-RUN bun add -g serve
-
-# Exponer puerto
-EXPOSE 3000
-
-# Servir archivos estáticos desde dist/
-CMD ["serve", "-s", "dist", "-l", "3000"]
+FROM httpd:2.4 AS runtime
+COPY --from=build /app/dist /usr/local/apache2/htdocs/
+EXPOSE 80
