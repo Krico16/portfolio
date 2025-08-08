@@ -146,59 +146,10 @@ const commands = {
 };
 ```
 
-## 🚀 Despliegue en Producción
-
-### Vercel
-```bash
-npm i -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm run build
-# Subir carpeta dist/
-```
-
-### Servidor Propio
-```bash
-# Usando Docker
-docker-compose up -d
-
-# O construir manualmente
-npm run build
-# Servir carpeta dist/ con nginx/apache
-```
-
 ## 🎨 Tecnologías Utilizadas
 
 - **[Astro](https://astro.build/)** - Framework web moderno
 - **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático
 - **[Docker](https://www.docker.com/)** - Contenedorización
-- **[Nginx](https://nginx.org/)** - Servidor web
 - **CSS3** - Estilos y animaciones
 - **JavaScript ES6+** - Lógica del terminal
-
-## 📄 Licencia
-
-MIT License - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📞 Contacto
-
-- **Email**: tu@email.com
-- **GitHub**: [tu-usuario](https://github.com/tu-usuario)
-- **LinkedIn**: [tu-perfil](https://linkedin.com/in/tu-perfil)
-
----
-
-⭐ ¡No olvides dar una estrella al proyecto si te gustó!
