@@ -1,5 +1,5 @@
 # Dockerfile
-FROM oven/bun:1.1.45-alpine
+FROM oven/bun:1.1.45-alpine as build
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN bun install
 COPY . .
 
 # Construir la aplicación
-RUN bun run build
+RUN bun build
 
 FROM httpd:2.4 AS runtime
 COPY --from=build /app/dist /usr/local/apache2/htdocs/
