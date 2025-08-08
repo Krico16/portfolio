@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "Portfolio personal con diseño de terminal interactiva",
-  "author": "Tu Nombre",
+  "author": "Krico16",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",

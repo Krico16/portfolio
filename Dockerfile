@@ -1,11 +1,11 @@
 # Dockerfile
-FROM oven/bun:1-alpine
+FROM oven/bun:1.1.45-alpine
 
 WORKDIR /app
 
 # Copiar archivos de dependencias
 COPY package*.json ./
-COPY bun.lock ./
+COPY bun.lockb ./
 
 # Instalar dependencias
 RUN bun install
@@ -17,7 +17,7 @@ COPY . .
 RUN bun run build
 
 # Exponer puerto
-EXPOSE 4444
+EXPOSE 3000
 
 # Servir la aplicación con Bun
-CMD ["bun", "run", "preview", "--host", "0.0.0.0", "--port", "4444"]
+CMD ["bun", "dev"]
