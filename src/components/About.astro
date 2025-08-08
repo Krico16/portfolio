@@ -1,0 +1,35 @@
+---
+import portfolioData from '../data/portfolio.json';
+---
+
+<style>
+  @import '../styles/about.css';
+  @import '../styles/terminal.css';
+</style>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="prompt-line">
+    <span class="prompt">krico@portfolio:~$ </span>
+    <span class="command">cat about.txt</span>
+  </div>
+  <div class="command-output">
+    <h3>👨‍💻 Sobre mí</h3>
+    <div class="about-content">
+      <div class="bio">
+        <p>{portfolioData.bio || portfolioData.description}</p>
+      </div>
+      <div class="contact-links">
+        <a href={`mailto:${portfolioData.email}`} class="contact-link">
+          📧 {portfolioData.email}
+        </a>
+        <a href={portfolioData.github} target="_blank" class="contact-link">
+          🐙 GitHub
+        </a>
+        <a href={portfolioData.linkedin} target="_blank" class="contact-link">
+          💼 LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+/* ASCII Art */
+.ascii-art {
+  color: #00ffff;
+  font-size: 10px;
+  line-height: 1;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+/* Welcome Message */
+.welcome-message {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-message .prompt-line {
+  text-align: left;
+}
+
+.about-info {
+  margin: 20px 0;
+}
+
+.about-info .name {
+  color: #00ffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.about-info .title {
+  color: #ffff00;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.about-info .experience,
+.about-info .location {
+  color: #888;
+  margin: 5px 0;
+}
+
+/* Navigation */
+.terminal-nav {
+  margin: 30px 0;
+}
+
+.nav-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.nav-item {
+  color: #00ffff;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.nav-item:hover {
+  background: #111;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ascii-art {
+    font-size: 8px;
+    overflow: hidden;
+  }
+  
+  .nav-items {
+    grid-template-columns: 1fr;
+  }
+}

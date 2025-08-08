@@ -1,0 +1,50 @@
+---
+import skillsData from '../data/skills.json';
+---
+
+<style>
+  @import '../styles/skills.css';
+  @import '../styles/terminal.css';
+</style>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+  <div class="prompt-line">
+    <span class="prompt">krico@portfolio:~$ </span>
+    <span class="command">cat skills.json</span>
+  </div>
+  <div class="command-output">
+    <h3>💻 Habilidades Técnicas</h3>
+    <div class="skills-container">
+      {['lenguajes', 'frameworks', 'database', 'tools-general', 'tools-devops', 'tools-os'].map((category) => {
+        const categorySkills = skillsData.filter(skill => skill.category === category);
+        const categoryNames = {
+          lenguajes: '⚡ Lenguajes Usados',
+          frameworks: '🔧 Frameworks/Metaframeworks',
+          database: '🗄️ Bases de Datos',
+          'tools-general': '🛠️ Herramientas Generales',
+          'tools-devops': '🚀 DevOps',
+          'tools-os': '💻 Sistemas Operativos'
+        };
+        
+        return categorySkills.length > 0 && (
+          <div class="skill-category">
+            <h4>{categoryNames[category as keyof typeof categoryNames]}</h4>
+            <div class="skills-list">
+              {categorySkills.map((skill) => {
+                const stars = '★'.repeat(skill.level) + '☆'.repeat(5 - skill.level);
+                return (
+                  <div class="skill-item">
+                    <span class="skill-icon">{skill.icon}</span>
+                    <span class="skill-name">{skill.name}</span>
+                    <span class="skill-level">{stars}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

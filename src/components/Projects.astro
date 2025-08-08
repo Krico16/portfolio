@@ -1,0 +1,59 @@
+---
+import projectsData from '../data/projects.json';
+---
+
+<style>
+  @import '../styles/projects.css';
+  @import '../styles/terminal.css';
+</style>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+  <div class="prompt-line">
+    <span class="prompt">krico@portfolio:~$ </span>
+    <span class="command">ls projects/</span>
+  </div>
+  <div class="command-output">
+    <h3>🚀 Proyectos Desarrollados</h3>
+    <div class="projects-grid">
+      {projectsData.map((project) => (
+        <div class="project-card">
+          <div class="project-header">
+            <h4 class="project-name">{project.name}</h4>
+            <div class="project-links">
+              {project.github && (
+                <a href={project.github} target="_blank" class="project-link">
+                  📂 Code
+                </a>
+              )}
+              {project.demo && (
+                <a href={project.demo} target="_blank" class="project-link">
+                  🌐 Demo
+                </a>
+              )}
+            </div>
+          </div>
+          <p class="project-desc">{project.description}</p>
+          <div class="tech-stack">
+            <span class="tech-label">Tech Stack:</span>
+            <div class="tech-tags">
+              {project.technologies.map((tech) => (
+                <span class="tech-tag">{tech}</span>
+              ))}
+            </div>
+          </div>
+          {project.highlights && (
+            <div class="highlights">
+              <span class="highlights-label">Características:</span>
+              <ul>
+                {project.highlights.map((highlight) => (
+                  <li>{highlight}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

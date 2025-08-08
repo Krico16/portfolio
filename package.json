@@ -1,0 +1,35 @@
+{
+  "name": "krico-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Portfolio personal con diseño de terminal interactiva",
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:dev": "docker-compose --profile dev up",
+    "docker:logs": "docker-compose logs -f portfolio"
+  },
+  "dependencies": {
+    "astro": "^5.12.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.6.3"
+  },
+  "keywords": [
+    "portfolio",
+    "terminal",
+    "astro",
+    "typescript",
+    "docker"
+  ]
+}

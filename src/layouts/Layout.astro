@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Portfolio personal con diseño de terminal - Desarrollador Full Stack" />
+		<title>Portfolio Terminal - Desarrollador Full Stack</title>
+		
+		<!-- Fuentes monospace -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+		background: #000;
+		color: #00ff00;
+	}
+	
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		min-height: 100vh;
+		background: linear-gradient(135deg, #000 0%, #111 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	
+	* {
+		box-sizing: border-box;
+	}
+	
+	/* Scrollbar personalizado */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: #111;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: #333;
+		border-radius: 4px;
+	}
+	
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+	
+	/* Responsive */
+	@media (max-width: 768px) {
+		body {
+			padding: 0;
+			align-items: stretch;
+		}
+	}
+</style>

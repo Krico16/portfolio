@@ -1,0 +1,158 @@
+[
+  {
+    "name": "JavaScript",
+    "category": "lenguajes",
+    "level": 5,
+    "icon": "⚡"
+  },
+  {
+    "name": "TypeScript",
+    "category": "lenguajes",
+    "level": 4,
+    "icon": "🔷"
+  },
+  {
+    "name": "Python",
+    "category": "lenguajes",
+    "level": 3,
+    "icon": "🐍"
+  },
+  {
+    "name": "HTML",
+    "category": "lenguajes",
+    "level": 5,
+    "icon": "🌐"
+  },
+  {
+    "name": "CSS",
+    "category": "lenguajes",
+    "level": 4,
+    "icon": "🎨"
+  },
+  {
+    "name": "SQL",
+    "category": "lenguajes",
+    "level": 4,
+    "icon": "🗃️"
+  },
+  {
+    "name": "MongoDB",
+    "category": "database",
+    "level": 4,
+    "icon": "🍃"
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "database",
+    "level": 4,
+    "icon": "🐘"
+  },
+  {
+    "name": "Redis",
+    "category": "database",
+    "level": 3,
+    "icon": "🔴"
+  },
+  {
+    "name": "MySQL",
+    "category": "database",
+    "level": 4,
+    "icon": "🐬"
+  },
+  {
+    "name": "Git",
+    "category": "tools-general",
+    "level": 5,
+    "icon": "📝"
+  },
+  {
+    "name": "VS Code",
+    "category": "tools-general",
+    "level": 5,
+    "icon": "💻"
+  },
+  {
+    "name": "Postman",
+    "category": "tools-general",
+    "level": 4,
+    "icon": "📮"
+  },
+  {
+    "name": "Node.js",
+    "category": "frameworks",
+    "level": 4,
+    "icon": "🟢"
+  },
+  {
+    "name": "Express.js",
+    "category": "frameworks",
+    "level": 4,
+    "icon": "🚂"
+  },
+  {
+    "name": "NestJS",
+    "category": "frameworks",
+    "level": 4,
+    "icon": "🚀"
+  },
+  {
+    "name": "Elysia",
+    "category": "frameworks",
+    "level": 2,
+    "icon": "🦊"
+  },
+  {
+    "name": "FastAPI",
+    "category": "frameworks",
+    "level": 3,
+    "icon": "⚡"
+  },
+  {
+    "name": "Docker",
+    "category": "tools-devops",
+    "level": 4,
+    "icon": "🐳"
+  },
+  {
+    "name": "AWS",
+    "category": "tools-devops",
+    "level": 3,
+    "icon": "☁️"
+  },
+  {
+    "name": "Nginx",
+    "category": "tools-devops",
+    "level": 3,
+    "icon": "🌐"
+  },
+  {
+    "name": "GitHub Actions",
+    "category": "tools-devops",
+    "level": 3,
+    "icon": "🔄"
+  },
+  {
+    "name": "SSH",
+    "category": "tools-devops",
+    "level": 4,
+    "icon": "🔑"
+  },
+  {
+    "name": "Windows",
+    "category": "tools-os",
+    "level": 5,
+    "icon": "🪟"
+  },
+  {
+    "name": "Linux",
+    "category": "tools-os",
+    "level": 3,
+    "icon": "🐧"
+  },
+  {
+    "name": "Terminal/Bash",
+    "category": "tools-os",
+    "level": 4,
+    "icon": "💻"
+  }
+]

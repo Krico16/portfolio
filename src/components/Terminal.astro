@@ -1,0 +1,35 @@
+---
+import portfolioData from '../data/portfolio.json';
+import Header from './Header.astro';
+import About from './About.astro';
+import Projects from './Projects.astro';
+import Skills from './Skills.astro';
+import Contact from './Contact.astro';
+import Footer from './Footer.astro';
+---
+
+<style>
+  @import '../styles/terminal.css';
+</style>
+
+<div id="terminal" class="terminal-container">
+  <!-- Terminal Header -->
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <span class="btn close"></span>
+      <span class="btn minimize"></span>
+      <span class="btn maximize"></span>
+    </div>
+    <div class="terminal-title">Terminal - {portfolioData.name}</div>
+  </div>
+  
+  <!-- Terminal Body -->
+  <div class="terminal-body">
+    <Header />
+    <About />
+    <Projects />
+    <Skills />
+    <Contact />
+    <Footer />
+  </div>
+</div>

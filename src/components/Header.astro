@@ -1,0 +1,68 @@
+---
+import portfolioData from '../data/portfolio.json';
+---
+
+<style>
+  @import '../styles/header.css';
+  @import '../styles/terminal.css';
+</style>
+
+<!-- Header Section -->
+<section id="header" class="section">
+  <div class="welcome-message">
+    <pre class="ascii-art">
+ ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
+ ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+ ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+ ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+ ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+ ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ 
+    </pre>
+    <div class="prompt-line">
+      <span class="prompt">krico@portfolio:~$ </span>
+      <span class="command">whoami</span>
+    </div>
+    <div class="about-info">
+      <p class="name">{portfolioData.name}</p>
+      <p class="title">{portfolioData.title}</p>
+      <p class="experience">{portfolioData.experience}</p>
+      <p class="location">📍 {portfolioData.location}</p>
+    </div>
+  </div>
+  
+  <!-- Navigation Menu -->
+  <nav class="terminal-nav">
+    <div class="prompt-line">
+      <span class="prompt">krico@portfolio:~$ </span>
+      <span class="command">ls -la</span>
+    </div>
+    <div class="nav-items">
+      <a href="#about" class="nav-item">📄 about.txt</a>
+      <a href="#projects" class="nav-item">📁 projects/</a>
+      <a href="#skills" class="nav-item">⚙️ skills.json</a>
+      <a href="#contact" class="nav-item">📧 contact.md</a>
+    </div>
+  </nav>
+</section>
+
+<script>
+  // Smooth scrolling for navigation links
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-item');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId as string);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+</script>

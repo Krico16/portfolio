@@ -1,0 +1,53 @@
+/* Contact Section */
+.contact-info {
+  margin: 20px 0;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 30px 100px 1fr;
+  gap: 15px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.contact-icon {
+  font-size: 16px;
+}
+
+.contact-label {
+  color: #ffff00;
+  font-weight: bold;
+}
+
+.contact-item a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-item span {
+  color: #00ff00;
+}
+
+.contact-message {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.contact-message p {
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-item {
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+  }
+}

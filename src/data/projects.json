@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ecommerce-platform",
+    "name": "E-commerce Platform",
+    "description": "Plataforma de comercio electrónico completa con carrito de compras, gestión de inventario y panel de administración",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Express", "JWT"],
+    "github": "https://github.com/tuusuario/ecommerce-platform",
+    "demo": "https://ecommerce-demo.krico16.xyz",
+    "image": "/images/ecommerce.png",
+    "highlights": [
+      "Integración con pasarelas de pago Stripe",
+      "Panel de administración completo",
+      "Responsive design y PWA",
+      "Sistema de autenticación JWT",
+      "API RESTful documentada"
+    ]
+  },
+  {
+    "id": "expenses-tracker",
+    "name": "Expenses Tracker",
+    "description": "Aplicación para seguimiento y gestión de gastos",
+    "technologies": ["Elysia", "Typescript", "MongoDB", "OpenRouter", "OpenAI"],
+    "github": "https://github.com/tuusuario/expenses-tracker",
+    "demo": "https://expenses.krico16.xyz",
+    "image": "/images/expenses.png",
+    "highlights": [
+      "Seguimiento de gastos",
+      "Análisis de patrones de gasto",
+      "Integración con OpenAI para recomendaciones",
+      "Exportación de datos en formato CSV",
+      "Interfaz intuitiva y amigable",
+      "Seguridad y privacidad de datos"
+    ]
+  },
+  {
+    "id": "ticketing-system",
+    "name": "Ticketing System",
+    "description": "Sistema de ticketing para atención al cliente con gestión de tickets, prioridades y seguimiento",
+    "technologies": ["Nuxt.js", "Elysia", "Typescript", "MongoDB", "PostgreSQL", "JWT", "Docker"],
+    "github": "https://github.com/Krico16/ticketing-system",
+    "demo": "https://ticketing.krico16.xyz",
+    "image": "/images/ticketing.png",
+    "highlights": [
+      "Gestión de tickets",
+      "Prioridades y seguimiento",
+      "Notificaciones push",
+      "Panel de administración",
+      "API RESTful documentada"
+    ]
+  }
+]
