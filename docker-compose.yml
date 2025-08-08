@@ -7,7 +7,7 @@ services:
     environment:
       - NODE_ENV=production
     ports:
-      - "8000:8000"
+      - "8888:8888"
     restart: unless-stopped
 
   # Servicio de desarrollo
