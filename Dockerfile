@@ -16,8 +16,11 @@ COPY . .
 # Construir la aplicación
 RUN bun run build
 
+# Instalar servidor estático
+RUN bun add -g serve
+
 # Exponer puerto
 EXPOSE 3000
 
-# Servir la aplicación con Bun
-CMD ["bun", "dev"]
+# Servir archivos estáticos desde dist/
+CMD ["serve", "-s", "dist", "-l", "3000"]
