@@ -15,6 +15,13 @@ COPY . .
 # Construir la aplicación
 RUN bun run build
 
-EXPOSE $PORT
+FROM nginx:alpine AS runtime
+COPY ./nginx/nginx.conf.template /etc/nginx/nginx.conf.template
+COPY --from=build /app/dist /usr/share/nginx/html
 
-CMD ["bunx", "--bun", "run", "preview", "--port", "$PORT"]
+# Script para generar nginx.conf desde el template con variables de entorno
+RUN echo '#!/bin/sh' > /docker-entrypoint.d/30-substitute-env.sh && \
+    echo 'envsubst < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf' >> /docker-entrypoint.d/30-substitute-env.sh && \
+    chmod +x /docker-entrypoint.d/30-substitute-env.sh
+
+EXPOSE $PORT
