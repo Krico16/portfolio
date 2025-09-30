@@ -1,11 +1,10 @@
 # Dockerfile
-FROM oven/bun:1.1.45-alpine as build
+FROM oven/bun:latest as build
 
 WORKDIR /app
 
 # Copiar archivos de dependencias
 COPY package*.json ./
-COPY bun.lock ./
 
 # Instalar dependencias
 RUN bun install
@@ -16,6 +15,6 @@ COPY . .
 # Construir la aplicación
 RUN bun run build
 
-FROM httpd:2.4 AS runtime
-COPY --from=build /app/dist /usr/local/apache2/htdocs/
-EXPOSE 8888
+EXPOSE $PORT
+
+CMD ["bunx", "--bun", "run", "preview", "--port", "$PORT"]
